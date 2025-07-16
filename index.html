@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--Fonte google-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+
+
+<!--Meta tag OG-->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MV beauty" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="Cada cuidado estético é um passo em direção à sua melhor versão. Nunca pare de se transformar!" />
+<meta property="og:site_name" content="MV beauty" />
+
+<link rel="stylesheet" href="./styles/output.css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="icon" type="image" href="./assets/cabeleireiro.png">
+
+<title >MV beauty</title>
+</head>
+<body class="overflow-x-hidden">
+<!-- HEADER -->
+
+<header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center object-cover opacidade-icon">
+<div class="w-full h-full flex flex-col justify-center items-center">
+    <img src="./assets/logoMV.jpg" alt="logo"
+        class="w-[128px] h-[128px] shadow-xl rounded-full object-cover animate-flutuar cursor-pointer foto-mv">
+
+    <h1 class="text-4xl mt-4 mb-2 font-bold text-my-dark-brown title-mv ">MV Beauty</h1>
+
+    <span class="text-black text-sm ml-3 mr-3 mt-4 text-center text-opacity-70 opacidade-icon">Cada cuidado estético é um passo em direção à sua melhor versão.</span>
+    <div class="bg-my-bright-yellow px-4 py-1 rounded-lg mt-5 shadow-lg shadow-red-500/50 opacidade-icon" id="date-span">
+        <span class="text-white font-medium">Seg a Dom - 8:00 as 18:00</span>
+    </div>
+    <span class="text-black text-xs ml-3 mr-3 mt-4 text-center text-opacity-70 opacidade-icon">Iputinga, recife-PE</span>
+</div>
+</header>
+<!-- FIM HEADER -->
+
+<h2 class="text-2xl md:text-3xl text-center font-bold mt-9 mb-9 hover:text-my-dark-brown opacidade-icon">Conheça meus serviços</h2>
+
+<!-- INICIO MENU -->
+<div id="menu">
+<main class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10
+    mx-auto max-w-7xl px-3 mb-16">
+    <!-- produto item -->
+    <div class="flex gap-3">
+        <img src="/assets/limpezaProfunda.jpg" alt="Limpeza de pele profunda"
+            class="w-28 h-28 rounded-md scale-110 mt-1 object-cover resume-left">
+
+        <div class="font-bold">
+            <p class="font-bold text-black hover:text-my-dark-brown title-produto">Limpeza de pele profunda</p>
+            <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Procedimento que remove impurezas e cravos, desobstruindo os poros. Isso promove a renovação celular, deixando a pele mais saudável e luminosa.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg resume-left">R$60.00</p>
+                <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon"                 
+                data-name="Limpeza de pele profunda"
+                data-price="60.00">
+
+                    <i class="fa fa-cart-plus text-lg text-white"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+        <!-- produto item -->
+        <!-- produto item -->
+    <div class="flex gap-3">
+        <img src="/assets/RevitalizaçãoFacial.jpg" alt="Revitalização facial"
+            class="w-28 h-28 rounded-md scale-110 mt-2 object-cover resume-left">
+
+        <div class="font-bold">
+            <p class="font-bold text-black hover:text-my-dark-brown title-produto">Revitalização facial</p>
+            <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Tratamento estético que nutre e hidrata profundamente a pele, devolvendo-lhe o viço, a luminosidade e a elasticidade, combatendo sinais de fadiga e envelhecimento precoce.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg resume-left">R$ 25.00</p>
+                <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+                data-name="Revitalização facial"
+                data-price="25.00">
+
+                <i class="fa fa-cart-plus text-lg text-white"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM produto item -->
+        <!-- produto item -->
+    <div class="flex gap-3">
+        <img src="/assets/DesignerHenna.jpg" alt="Designer de sobrancelhas com Henna"
+            class="w-28 h-28 rounded-md scale-110 mt-2 object-cover resume-left">
+
+        <div class="font-bold">
+            <p class="font-bold text-black hover:text-my-dark-brown title-produto">Design de sobrancelhas (Henna)</p>
+            <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Modela e preenche as falhas das sobrancelhas utilizando uma tintura natural. Cria um efeito de maior volume e definição, realçando seu olhar.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg resume-left">R$25.00</p>
+                <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+                data-name="Design de sobrancelhas com Henna"
+                data-price="25.00">
+
+                    <i class="fa fa-cart-plus text-lg text-white"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM produto item -->
+        <!-- produto item -->
+    <div class="flex gap-3">
+        <img src="/assets/DesignerSobrancelhas.jpg" alt="Designer de sobrancelhas"
+            class="w-28 h-28 rounded-md scale-110 mt-2 object-cover resume-left">
+
+        <div class="font-bold">
+            <p class="font-bold  text-black hover:text-my-dark-brown title-produto">Design de sobrancelhas</p>
+            <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Modela as sobrancelhas utilizando técnicas como a remoção de pelos, para criar um formato que harmonize seu rosto e realce o olhar de forma natural.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg resume-left">R$15.00</p>
+                <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+                data-name="Design de sobrancelhas"
+                data-price="15.00">
+
+                    <i class="fa fa-cart-plus text-lg text-white"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM produto item -->
+        <!-- produto item -->
+    <div class="flex gap-3">
+        <img src="/assets/EpilaçãoBuço.jpg" alt="Epilação de buço"
+            class="w-28 h-28 rounded-md scale-110 mt-2 object-cover resume-left">
+
+        <div class="font-bold">
+            <p class="font-bold  text-black hover:text-my-dark-brown title-produto">Epilação de buço</p>
+            <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Procedimento estético que remove os pelos indesejados acima do lábio superior, proporcionando uma pele lisa e uma aparência mais definida ao redor da sua boca.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg resume-left">R$ 25.00</p>
+                <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+                data-name="Epilação de buço"
+                data-price="25.00">
+
+                <i class="fa fa-cart-plus text-lg text-white"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- produto item -->
+</main>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl mt-11 mb-8 hover:text-my-dark-brown text-center opacidade-icon">Combos</h2>
+</div>
+<!------GRID COMBOS------>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10
+    mx-auto max-w-7xl px-3 mb-16 pb-8" id="menu">
+<!-- produto item -->
+<div class="flex gap-3 w-full">
+    <img src="/assets/designerEpilacao.jpg" alt="Designer + Epilação de buço"
+        class="w-28 h-28 rounded-md scale-110 object-cover mt-2 resume-left">
+
+    <div class="w-full">
+        <p class="font-bold  text-black hover:text-my-dark-brown title-produto">Design sobrancelhas + Epilação de buço</p>
+
+        <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Um combo que remove os pelos indesejados acima do lábio junto do design de sobrancelhas que modela utilizando técnicas de remoção de pelos.</p>
+        
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg resume-left">R$ 20.00</p>
+            <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+            data-name="Design sobrancelhas + Epilação de buço"
+            data-price="20.00">
+
+            <i class="fa fa-cart-plus text-lg text-white"> </i>
+            </button>
+        </div>
+    </div>
+</div>
+<!--FIM produto item -->
+    <!-- produto item -->
+<div class="flex gap-3 w-full">
+    <img src="/assets/desinerHennaEpilacao.jpg" alt="Designer com henna + Epilação de buço"
+        class="w-28 h-28 rounded-md scale-110 object-cover mt-2 resume-left">
+
+    <div class="w-full">
+        <p class="font-bold  text-black hover:text-my-dark-brown title-produto">Design com henna + Epilação de buço</p>
+
+        <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Combinação do procedimento que remove os pelos indesejados acima do lábio superior com o designer de Henna que modela e preenche as falhas das sobrancelhas</p>
+
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg resume-left">R$ 30.00</p>
+            <button class="bg-gray-900 px-5 pt-1 rounded add-to-cart-btn opacidade-icon" 
+            data-name="Design com henna + Epilação de buço"
+            data-price="30.00">
+
+            <i class="fa fa-cart-plus text-lg text-white"> </i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- FIM produto item -->
+ <!-- produto item -->
+<div class="flex gap-3 w-full">
+    <img src="/assets/limpezadep.jpg" alt="Designer com henna + Epilação de buço"
+        class="w-28 h-28 rounded-md scale-110 object-cover mt-2 resume-left">
+
+    <div class="w-full">
+        <p class="font-bold  text-black hover:text-my-dark-brown title-produto">Limpeza de pele + Design sobrancelhas</p>
+
+        <p class="text-xs font-medium text-justify  text-black hover:text-my-golden-ochre resume-right">Combo de procedimentos que remove impurezas e cravos, desobstruindo os poros e com design de sobrancelhas que modela e remove pelos.</p>
+
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg mb-6 resume-left">R$ 70.00</p>
+            <button class="bg-gray-900 px-5 pt-1 mb-6 rounded add-to-cart-btn opacidade-icon" 
+            data-name="Limpeza de pele + Design sobrancelhas"
+            data-price="70.00">
+
+            <i class="fa fa-cart-plus text-lg text-white"> </i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- FIM produto item -->
+</div>
+<!-- FIM GRID COMBOS-->
+</div>
+<!-- FIM MENU -->
+
+<!--modal card-->
+<div class="bg-black/70 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+
+
+<div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] ">
+    <h2 class="text-center font-bold text-2x1 mb-2">
+        Meu carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        
+        <p class="font-bold border-b-4 pb-2 mb-2 border-gray-200">Total: <span id="cart-total">0.00</span></p>
+
+        <p class="font-bold mt-4 mb-2">Informe seu nome completo:</p>
+        <input type="text" placeholder="Digite seu nome..." id="address" class="w-full px-4 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <p class="text-red-500 hidden text-sm" id="address-warn">Digite seu nome!</p>
+
+        <div class="flex items-center justify-between">
+            <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition-colors shadow-lg shadow-red-300/30" id="close-modal-btn">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 mt-4 rounded shadow-lg hover:bg-green-600 shadow-green-300/30">Finalizar pedido</button>
+        </div>
+</div>
+
+</div>
+<!--Fim modal card-->
+<!--Button CART FOOTER -->
+<footer class="w-full bg-my-dark-brown py-4 fixed bottom-0 z-40 flex items-center justify-center text-white text-center transition-opacity duration-500 opacity-100 " id="main-footer">
+    <button class="flex items-center gap-2 text-white font-bold opacidade-icon" id="cart-btn">
+        <span class="opacidade-icon" id="cart-count">(0)</span>    
+        Meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white icon-carrinho" > </i>
+    </button>
+</footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script> 
+
+
+
+
+
+
+</body>
+
+</html>
