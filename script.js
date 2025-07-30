@@ -63,11 +63,20 @@ if (existingItem) {
 updateCartModal()
 }
 
+//função total
+function calculateCartTotal() {
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+    });
+    return total;
+}
+
 //atualiza o carrinho 
 
 function updateCartModal() {
 cartItemContainer.innerHTML = "";
-let total = 0;
+//let total = 0;
 cart.forEach(item => {
     const cartItemElement = document.createElement("div");
     cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
@@ -89,12 +98,13 @@ cart.forEach(item => {
     </div>
     `
 
-    total += item.price * item.quantity;
+    //total += item.price * item.quantity;
 
     cartItemContainer.appendChild(cartItemElement)
 
 })
 
+const total = calculateCartTotal();
 cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
@@ -140,6 +150,7 @@ addressInput.addEventListener("input", function(event){
 })
 
 
+
 // Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
 
@@ -174,17 +185,22 @@ checkoutBtn.addEventListener("click", function(){
         return `* ${item.name} | Qtd: ${item.quantity} | Valor: R$${item.price.toFixed(2)}`;
     }).join("\n"); // Junta cada item com uma nova linha
 
+    const totalAmount = calculateCartTotal(); // Calcula o valor total do carrinho
+    const formattedTotal = totalAmount.toLocaleString("pt-BR", { // Formata o total para moeda
+        style: "currency",
+        currency: "BRL"
+    });
     const mensagemAutomatica = '*Por favor, envie essa mensagem e aguarde!\n Em instantes, daremos prosseguimento ao seu atendimento.*';
-
     // Construção da mensagem final
     const finalMessage = `
 *Olá! Seja bem-vindo(a) à MV Beauty!*
 
 *CLIENTE:* ${addressInput.value}
 
-*SERVIÇOS SOLICITADOS:*
+*SERVIÇOS SOLICITADOS:*\n
 ${cartItemsFormatted}
 
+*TOTAL A PAGAR: ${formattedTotal}*\n
 ${mensagemAutomatica}
 `;
 
@@ -246,36 +262,36 @@ document.addEventListener('DOMContentLoaded', function() {
     //Código ScrollReveal
     const sr = ScrollReveal({
         origin: 'top',
-        distance: '30px',
-        duration: 3500,
+        distance: '10px',
+        duration: 3000,
         delay: 400,
     });
     sr.reveal(`.title-mv, .title-span-mv`);
     sr.reveal(`.foto-mv`, { delay: 500 });
     sr.reveal(``, { delay: 600 });
     sr.reveal(`.title-mv-servico`, { delay:700});
-    sr.reveal(`.resume-left, .title-produto`, { origin: 'left' });
-    sr.reveal(`.resume-right`, { origin: 'right' });
+    sr.reveal(`.resume-left, .title-produto`, { origin: 'left', duration: 2800, rotate: { y: 40 } });
+    sr.reveal(`.resume-right`, { origin: 'right',duration: 2500 });
     sr.reveal(`.opacidade-icon`, {
         origin: 'bottom',
         distance: '15px', // Isso remove o movimento
         opacity: 0,      // Garante que o elemento comece invisível
-        duration: 3500,  // Duração da animação (ajuste conforme necessário)
+        duration: 2500,  // Duração da animação (ajuste conforme necessário)
         delay: 400,      // Atraso antes de iniciar a animação
     });
 
     sr.reveal(`.icon-carrinho`,{
         rotate: { y: 150 }, // Começa rotacionado 90 graus no eixo Y (quase de lado)
         opacity: 0,
-        duration: 3500,
+        duration: 2500,
         delay: 200,
         origin: 'left',
-        distance: '200px',
+        distance: '100px',
     });
     sr.reveal(`.modal-text`,{
         rotate: { y: 90 }, // Começa rotacionado 90 graus no eixo Y (quase de lado)
         opacity: 0,
-        duration: 1800,
+        duration: 2000,
         delay: 700,
         origin: 'bottom',
         distance: '40px',
